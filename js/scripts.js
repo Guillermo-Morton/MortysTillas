@@ -176,13 +176,13 @@ botonContinuar.onclick = function(){
             let total = document.querySelector("#total-estimado").textContent
             if(numeroPedidos === 1){
               let pedido1Item = `*PEDIDO: Morty's* %0a%0a— *[ ${cantidadUno} ]* ${productoUno} > *${precioUno}*%0a%0a*Total:* ${total}%0a%0aTipo de envío: *${tipoDeEnvio}*%0aForma de pago: *${formaDePago}*%0a`;
-              window.open("https://wa.me/message/J5HIASWTGRV7I1&text=" + pedido1Item);
+              window.open("https://api.whatsapp.com/send?phone=5493815851811&text=" + pedido1Item);
             } else if (numeroPedidos > 1){
               let productoDos = document.querySelectorAll("#exampleModalLabel2")[1].textContent
               let cantidadDos = document.querySelectorAll("#sel2")[1].value
               let precioDos =  document.querySelectorAll("#price-span2")[1].textContent
               let pedido2Item = `*PEDIDO: Morty's* %0a%0a— *[ ${cantidadUno} ]* ${productoUno} > *${precioUno}*%0a— *[ ${cantidadDos} ]* ${productoDos} > *${precioDos}* %0a %0a*Total:* ${total}%0a%0aTipo de envío: *${tipoDeEnvio}*%0aForma de pago: *${formaDePago}*%0a`;
-              window.open("https://wa.me/message/J5HIASWTGRV7I1&text=" + pedido2Item);
+              window.open("https://api.whatsapp.com/send?phone=5493815851811&text=" + pedido2Item);
             }
           }   
 }
